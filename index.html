@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>詩集與歌詞庫</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Noto Serif TC",serif;
+  line-height:2;
+  max-width:700px;
+  margin:0 auto;
+  padding:30px 20px;
+  background:#fdfdfb;
+  color:#222;
+  transition:0.3s;
+}
+.dark{background:#1a1a1a;color:#ddd}
+header{margin-bottom:40px;display:flex;justify-content:space-between;align-items:center}
+h1{font-size:26px;font-weight:normal}
+button{border:1px solid #999;background:transparent;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:14px;color:inherit}
+.poem{margin-bottom:50px;white-space:pre-line}
+.poem h2{font-size:20px;margin-bottom:8px;font-weight:normal}
+.author{font-size:14px;opacity:0.7;margin-bottom:16px}
+footer{margin-top:60px;font-size:13px;opacity:0.6}
+</style>
+</head>
+<body>
+<header>
+  <h1>詩集與歌詞庫</h1>
+  <button id="toggle">切換深色模式</button>
+</header>
+
+<!-- 每一首詩歌或歌詞就複製一個 .poem 區塊 -->
+<div class="poem">
+<h2>詩題 / 歌名</h2>
+<div class="author">作者</div>
+這裡放詩或歌詞內容
+
+一行一行寫
+換行只直接 Enter
+</div>
+
+<div class="poem">
+<h2>另一首</h2>
+<div class="author">作者</div>
+春有百花秋有月
+夏有涼風冬有雪
+若無閒事掛心頭
+便是人間好時節
+</div>
+
+<footer>
+個人詩歌收藏，請留意版權
+</footer>
+
+<script>
+const btn=document.getElementById('toggle');
+btn.onclick=()=>document.body.classList.toggle('dark');
+</script>
+</body>
+</html>
